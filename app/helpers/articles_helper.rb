@@ -1,6 +1,6 @@
 module ArticlesHelper
   def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :tag_list)
       @article = Article.new(article_params)
   end
   def update
@@ -11,6 +11,6 @@ module ArticlesHelper
 
     redirect_to article_path(@article)
   end
-
+  
 
 end
